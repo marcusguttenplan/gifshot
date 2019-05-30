@@ -1839,7 +1839,8 @@ AnimatedGIF.prototype = {
                 ctx.fillStyle = fontColor;
                 ctx.textAlign = textAlign;
                 ctx.textBaseline = textBaseline;
-                ctx.fillText(textToUse, textXCoordinate, textYCoordinate);
+                // ctx.fillText(textToUse, textXCoordinate, textYCoordinate);
+                wrapText(ctx, textToUse, textXCoordinate, textYCoordinate - 100, 600, 40);
             }
             if (waterMark) {
                 ctx.drawImage(waterMark, waterMarkXCoordinate, waterMarkYCoordinate, waterMarkWidth, waterMarkHeight);
@@ -2175,7 +2176,8 @@ var screenShot = {
                     context.fillStyle = fontColor;
                     context.textAlign = textAlign;
                     context.textBaseline = textBaseline;
-                    context.fillText(text, textXCoordinate, textYCoordinate);
+                    // context.fillText(text, textXCoordinate, textYCoordinate);
+                    wrapText(ctx, textToUse, textXCoordinate, textYCoordinate - 100, 600, 40);
                 }
 
                 imageData = context.getImageData(0, 0, gifWidth, gifHeight);

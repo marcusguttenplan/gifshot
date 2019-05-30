@@ -307,7 +307,8 @@ AnimatedGIF.prototype = {
               ctx.fillStyle = fontColor;
               ctx.textAlign = textAlign;
               ctx.textBaseline = textBaseline;
-              ctx.fillText(textToUse, textXCoordinate, textYCoordinate);
+              // ctx.fillText(textToUse, textXCoordinate, textYCoordinate);
+              wrapText(ctx, textToUse, textXCoordinate, textYCoordinate-100, 600, 40);
           }
           if(waterMark) {
             ctx.drawImage(waterMark, waterMarkXCoordinate, waterMarkYCoordinate, waterMarkWidth, waterMarkHeight);
