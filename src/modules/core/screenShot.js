@@ -9,6 +9,7 @@
 
 // Dependencies
 import utils from './utils';
+import wrapText from './wrapText'
 import AnimatedGIF from './AnimatedGIF';
 
 // Helpers

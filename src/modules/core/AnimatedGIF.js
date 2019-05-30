@@ -9,6 +9,7 @@
 
 // Dependencies
 import utils from './utils';
+import wrapText from './wrapText'
 import frameWorkerCode from './processFrameWorker';
 import NeuQuant from '../dependencies/NeuQuant';
 import GifWriter from '../dependencies/gifWriter';
