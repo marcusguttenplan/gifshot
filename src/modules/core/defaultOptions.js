@@ -35,6 +35,8 @@ const defaultOptions = {
     textBaseline: 'bottom',
     textXCoordinate: null,
     textYCoordinate: null,
+    lineHeight: null,
+    maxTextWidth: null,
     progressCallback: noop,
     completeCallback: noop,
     saveRenderingContexts: false,

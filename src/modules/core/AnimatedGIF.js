@@ -273,6 +273,8 @@ AnimatedGIF.prototype = {
       const options = self.options;
       const width = options.gifWidth;
       const height = options.gifHeight;
+      const lineHeight = options.lineHeight;
+      const maxWidth = options.maxWidth;
       const fontSize = utils.getFontSize(gifshotOptions);
       const {
           filter,

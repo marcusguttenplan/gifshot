@@ -407,6 +407,8 @@ var defaultOptions = {
     textBaseline: 'bottom',
     textXCoordinate: null,
     textYCoordinate: null,
+    lineHeight: null,
+    maxTextWidth: null,
     progressCallback: noop,
     completeCallback: noop,
     saveRenderingContexts: false,
@@ -1806,6 +1808,8 @@ AnimatedGIF.prototype = {
         var options = self.options;
         var width = options.gifWidth;
         var height = options.gifHeight;
+        var lineHeight = options.lineHeight;
+        var maxWidth = options.maxWidth;
         var fontSize = utils.getFontSize(gifshotOptions);
         var _gifshotOptions = gifshotOptions,
             filter = _gifshotOptions.filter,
@@ -2097,6 +2101,8 @@ var screenShot = {
             waterMarkXCoordinate = options.waterMarkXCoordinate,
             waterMarkYCoordinate = options.waterMarkYCoordinate;
 
+        var lineHeight = options.lineHeight;
+        var maxWidth = options.maxWidth;
         var gifWidth = Number(options.gifWidth);
         var gifHeight = Number(options.gifHeight);
         var interval = Number(options.interval);

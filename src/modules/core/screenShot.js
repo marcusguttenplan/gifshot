@@ -47,6 +47,8 @@ const screenShot = {
             waterMarkXCoordinate,
             waterMarkYCoordinate
         } = options;
+        let lineHeight = options.lineHeight;
+        let maxWidth = options.maxWidth;
         let gifWidth = Number(options.gifWidth);
         let gifHeight = Number(options.gifHeight);
         let interval = Number(options.interval);
