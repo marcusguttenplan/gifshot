@@ -2207,7 +2207,7 @@ var screenShot = {
                     context.textAlign = textAlign;
                     context.textBaseline = textBaseline;
                     // context.fillText(text, textXCoordinate, textYCoordinate);
-                    wrapText(ctx, textToUse, textXCoordinate, textYCoordinate - 100, maxWidth, lineHeight);
+                    wrapText(context, textToUse, textXCoordinate, textYCoordinate - 100, maxWidth, lineHeight);
                 }
 
                 imageData = context.getImageData(0, 0, gifWidth, gifHeight);
