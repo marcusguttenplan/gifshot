@@ -121,7 +121,7 @@ const screenShot = {
                   renderingContextsToSave.push(context.getImageData(0, 0, gifWidth, gifHeight));
               }
               if (waterMark) {
-                  context.drawImage(waterMark, waterMarkXCoordinate, waterMarkYCoordinate, waterMarkWidth, waterMarkHeight);
+                  context.drawImage(waterMark, waterMarkXCoordinate, waterMarkYCoordinate, waterMarkWidth, waterMarkHeight, waterMarkXCoordinate, waterMarkYCoordinate, waterMarkWidth, waterMarkHeight);
               }
               // If there is text to display, make sure to display it on the canvas after the image is drawn
               if (text) {

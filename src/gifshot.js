@@ -1860,7 +1860,7 @@ AnimatedGIF.prototype = {
         try {
             ctx.filter = filter;
 
-            ctx.drawImage(element, 0, 0, width, height);
+            ctx.drawImage(element, 0, 0, width, height, 0, 0, width, height);
 
             if (textToUse) {
                 ctx.font = font;
@@ -1871,7 +1871,7 @@ AnimatedGIF.prototype = {
                 wrapText(ctx, textToUse, textXCoordinate, textYCoordinate - 100, maxWidth, lineHeight);
             }
             if (waterMark) {
-                ctx.drawImage(waterMark, waterMarkXCoordinate, waterMarkYCoordinate, waterMarkWidth, waterMarkHeight);
+                ctx.drawImage(waterMark, waterMarkXCoordinate, waterMarkYCoordinate, waterMarkWidth, waterMarkHeight, waterMarkXCoordinate, waterMarkYCoordinate, waterMarkWidth, waterMarkHeight);
             }
             imageData = ctx.getImageData(0, 0, width, height);
 
@@ -2198,7 +2198,7 @@ var screenShot = {
                     renderingContextsToSave.push(context.getImageData(0, 0, gifWidth, gifHeight));
                 }
                 if (waterMark) {
-                    context.drawImage(waterMark, waterMarkXCoordinate, waterMarkYCoordinate, waterMarkWidth, waterMarkHeight);
+                    context.drawImage(waterMark, waterMarkXCoordinate, waterMarkYCoordinate, waterMarkWidth, waterMarkHeight, waterMarkXCoordinate, waterMarkYCoordinate, waterMarkWidth, waterMarkHeight);
                 }
                 // If there is text to display, make sure to display it on the canvas after the image is drawn
                 if (text) {
