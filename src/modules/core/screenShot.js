@@ -130,7 +130,7 @@ const screenShot = {
                   context.textAlign = textAlign;
                   context.textBaseline = textBaseline;
                   // context.fillText(text, textXCoordinate, textYCoordinate);
-                  wrapText(context, text, textXCoordinate, textYCoordinate-100, maxWidth, lineHeight);
+                  wrapText(context, text, textXCoordinate, textYCoordinate - parseInt(fontSize) - 50, maxWidth, lineHeight);
               }
 
               imageData = context.getImageData(0, 0, gifWidth, gifHeight);

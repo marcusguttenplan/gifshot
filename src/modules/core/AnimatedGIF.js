@@ -303,7 +303,9 @@ AnimatedGIF.prototype = {
       try {
           ctx.filter = filter;
 
-          ctx.drawImage(element, 0, 0, width, height, 0, 0, width, height);
+          // ctx.drawImage(element, 0, 0, width, height);
+          // ctx.drawImage(element, 0, 0, width, height, 0, 0, width, height);
+          ctx.drawImage(element, 0, 0, width, height);
 
           if (textToUse) {
               ctx.font = font;
@@ -311,10 +313,11 @@ AnimatedGIF.prototype = {
               ctx.textAlign = textAlign;
               ctx.textBaseline = textBaseline;
               // ctx.fillText(textToUse, textXCoordinate, textYCoordinate);
-              wrapText(ctx, textToUse, textXCoordinate, textYCoordinate-100, maxWidth, lineHeight);
+              // wrapText(ctx, textToUse, textXCoordinate, textYCoordinate-100, maxWidth, lineHeight);
+              wrapText(ctx, textToUse, textXCoordinate, textYCoordinate - parseInt(fontSize) - 50, maxWidth, lineHeight);
           }
           if(waterMark) {
-            ctx.drawImage(waterMark, waterMarkXCoordinate, waterMarkYCoordinate, waterMarkWidth, waterMarkHeight, waterMarkXCoordinate, waterMarkYCoordinate, waterMarkWidth, waterMarkHeight);
+            ctx.drawImage(waterMark, waterMarkXCoordinate, waterMarkYCoordinate, waterMarkWidth, waterMarkHeight);
           }
           imageData = ctx.getImageData(0, 0, width, height);
 
@@ -327,6 +330,16 @@ AnimatedGIF.prototype = {
       const frames = this.frames;
       const imageDataArray = imageData.data;
 
+      // this.frames.push({
+      //     'data': imageDataArray,
+      //     'width': imageData.width,
+      //     'height': imageData.height,
+      //     'palette': null,
+      //     'dithering': null,
+      //     'done': false,
+      //     'beingProcessed': false,
+      //     'position': frames.length
+      // });
       this.frames.push({
           'data': imageDataArray,
           'width': imageData.width,
