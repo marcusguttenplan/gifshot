@@ -3,12 +3,12 @@
  -----------------------
 */
 export default function wrapText(context, text, x, y, maxWidth, lineHeight) {
-    var cars = text.split("\n");
+    var lines = text.split("\n");
 
-    for (var ii = 0; ii < cars.length; ii++) {
+    for (var ii = 0; ii < lines.length; ii++) {
 
         var line = "";
-        var words = cars[ii].split(" ");
+        var words = lines[ii].split(" ");
 
         for (var n = 0; n < words.length; n++) {
             var testLine = line + words[n] + " ";
